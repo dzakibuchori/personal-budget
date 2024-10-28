@@ -1,6 +1,17 @@
 {
-  "extends": "fastify-tsconfig",
   "compilerOptions": {
+    "strict": false,
+    "resolveJsonModule": true,
+    "removeComments": true,
+    "newLine": "lf",
+    "noUnusedLocals": true,
+    "noFallthroughCasesInSwitch": true,
+    "isolatedModules": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+    "lib": [
+      "ESNext"
+    ],
     "outDir": "dist",
     "sourceMap": true,
     "moduleResolution": "NodeNext",

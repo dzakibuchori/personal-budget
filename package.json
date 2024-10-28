@@ -13,24 +13,26 @@
     "build:ts": "tsc",
     "watch:ts": "tsc -w",
     "dev": "npm run build:ts && concurrently -k -p \"[{name}]\" -n \"TypeScript,App\" -c \"yellow.bold,cyan.bold\" \"npm:watch:ts\" \"npm:dev:start\"",
-    "dev:start": "fastify start --ignore-watch=.ts$ -w -l info -P dist/app.js"
+    "dev:start": "fastify start --ignore-watch=.ts$ -w -l info -P dist/app.js",
+    "vercel": "vercel dev"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "fastify": "^5.0.0",
-    "fastify-plugin": "^5.0.0",
     "@fastify/autoload": "^6.0.0",
     "@fastify/sensible": "^6.0.0",
-    "fastify-cli": "^7.0.1"
+    "dotenv": "^16.4.5",
+    "fastify": "^5.0.0",
+    "fastify-cli": "^7.0.1",
+    "fastify-plugin": "^5.0.0"
   },
   "devDependencies": {
     "@types/node": "^22.1.0",
+    "@vercel/node": "^3.2.23",
     "c8": "^10.1.2",
-    "ts-node": "^10.4.0",
     "concurrently": "^9.0.0",
-    "fastify-tsconfig": "^2.0.0",
+    "ts-node": "^10.4.0",
     "typescript": "^5.2.2"
   }
 }
